@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lightbulb</title>
+	<script type="text/javascript">
+			function on(el){
+				var elem = document.getElementById('el');
+				elem.style.transition = "background .5s";
+				elem.style.background = "yellow";
+
+			}
+			function off(el){
+				var elem = document.getElementById('el');
+				elem.style.transition = "background .5s";
+				elem.style.background = "lightgrey"
+			}
+	</script>
+</head>
+<body>
+	<div class="bulbcase1" id="el"></div>
+		<div class="light" id="light"></div>
+			<div class="bottom"></div>
+
+		<div id="on" onclick="on('el')">ON</div>
+		<div id="off" onclick="off('el')">OFF</div>
+</body>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			background: #111;
+			transform-style: preserve-3d;
+		}
+		.bulbcase1{
+			width: 150px;
+			height: 200px;
+			background: lightgrey;
+			position: absolute;
+			left: 250px;
+			top: 100px;
+			clip-path: polygon(50% 3%, 80% 10%, 100% 35%, 100% 70%, 69% 100%, 41% 100%, 35% 100%, 0% 70%, 0% 35%, 20% 10%);
+		}
+		.light{
+			width: 50px;
+			height: 90px;
+			background: #111;
+			position: absolute;
+			left: 302px;
+			top: 220px;
+			clip-path: polygon(100% 23%, 78% 96%, 89% 28%, 76% 36%, 67% 27%, 49% 34%, 33% 26%, 9% 30%, 28% 98%, 0 24%);
+		}
+		.bottom{
+			width: 60px;
+			height: 40px;
+			background: brown;
+			position: absolute;
+			left: 298px;
+			top: 300px;
+		}
+
+				#on{
+					width: 50px;
+					height: 50px;
+					position: absolute;
+					left: 500px;
+					top: 200px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: #000;
+					font-family: sans-serif;
+					font-size: 1em;
+					background: grey;
+					border-top-right-radius: 5px;
+					border-top-left-radius: 5px;
+					transition: background 0s, color 0s; 
+				}
+				#on:hover{
+					background: dimgrey;
+					color: #fff;
+				}
+
+				#off{
+					width: 50px;
+					height: 50px;
+					position: absolute;
+					left: 500px;
+					top: 250px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: #000;
+					font-family: sans-serif;
+					font-size: 1em;
+					background: grey;
+					border-bottom-right-radius: 5px;
+					border-bottom-left-radius: 5px;
+					transition: background 0s, color 0s; 
+				}
+				#off:hover{
+					background: dimgrey;
+					color: #fff;
+				}
+		
+	</style>
+</html>
